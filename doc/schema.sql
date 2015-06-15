@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS `htz_search` DEFAULT CHARACTER SET utf8;
+USE `htz_search`;
+
+DROP TABLE IF EXISTS `articles`;
+CREATE TABLE `articles`(
+	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	`title` VARCHAR(255) NOT NULL,
+	`content` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+	`author` VARCHAR(64) NOT NULL,
+	`kind` VARCHAR(64) NOT NULL,
+	`ctime` DATE NOT NULL,
+	PRIMARY KEY (`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
